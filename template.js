@@ -83,8 +83,8 @@ console.log(sunqfuData1 === sunqfuData2); // Değerler ve türler eşit mi? fals
 console.log(sunqfuData1 !== sunqfuData2); // Değerler veya türler eşit değil mi? true (23 !== 5)
 
 // Assignment Operators (Atama Operatörleri)
-const data1 = 10,
-  data2 = "10";
+const data1 = "10",
+const  data2 = "10";
 console.log(data1 == data2); // Değerler eşit mi? (Tip kontrolü yapmaz) true (10 == "10")
 console.log(data1 === data2); // Değerler ve türler eşit mi? false (10 !== "10")
 
@@ -224,3 +224,58 @@ console.log(!isNaN(result3)); // Sonuç: false (çünkü result3 NaN)
 dataNumber2 = 55; // dataNumber2'ye 55 atanır
 var dataNumber2; // Tanımlama yapılır (hoisting ile)
 console.log(dataNumber2); // Sonuç: 55
+
+// Numerical Operations (Sayısal İşlemler)
+let numberSunqfu = 33;  // numberSunqfu değişkenine 33 sayısı atanıyor
+console.log(numberSunqfu);  // numberSunqfu değerini yazdırır → 33
+console.log(typeof numberSunqfu);  // Değişkenin türünü yazdırır → "number"
+console.log(isNaN(numberSunqfu));  // numberSunqfu bir sayı olduğu için false döner
+
+
+let numberSunqfuFloat = 33.33;  // numberSunqfuFloat değişkenine 33.33 atanıyor
+console.log(numberSunqfuFloat);  // Değişkenin değerini yazdırır → 33.33
+console.log(typeof numberSunqfuFloat);  // Değişkenin türünü yazdırır → "number"
+
+let number2 = 4 / 0;  // 4'ü 0'a bölmeye çalışıyoruz
+console.log(number2);  // Sonucu konsola yazdırıyoruz çıkış Infinity
+
+let bilimselGosterim = 13E+5;  // 13 x 10^5 anlamına gelir
+console.log(bilimselGosterim); //Çıktı 1300000
+
+let bilimselGosterim2 = 1300000;  // Normal sayı olarak tanımlandı
+console.log(bilimselGosterim2); //Çıktı 1300000
+
+
+let bilimselGosterim3 = 13E-5;  // 13 x 10^(-5) anlamına gelir
+console.log(bilimselGosterim3); //Çıktı 0.00013
+
+// Numerical Operations (Decimal Base) Sayısal İşlemler (Ondalık Taban)
+
+//Binary (ikili)
+let binary = 0b00011100;  // Binary (ikili) sistemde 28 sayısı
+console.log(binary);       // 28 çıktısını verir
+
+// Octal (sekizlik)
+let octal = 0o74101;  // Octal (sekizlik) sistemde 30401 sayısı
+console.log(octal);    // 30401 çıktısını verir
+
+//Hexadecimal (onaltılık) 
+let hexadecimal = 0x01fed;  // Hexadecimal (onaltılık) sistemde 1,127 sayısı
+console.log(hexadecimal);    // 1,127 çıktısını verir
+
+//toFixed , den sonra 4 hane gösterir
+const sayı = 56.123456;  // Sayı 56.123456
+console.log(sayı.toFixed(4));  // Ondalık kısmı 4 basamağa yuvarlayarak "56.1235" döndürür
+
+//toPrecision
+console.log(sayı.toPrecision(4));  // Toplamda 4  basamakla gösterir yazdığın sayıya göre değişiklik gösterir: "56.12"
+
+let data5 = "10";  // String "10"
+let data6 = "30";  // String "30"
+console.log(data5 + data6);  // String birleştirme sonucu "1030"
+
+console.log(Number(data5) + Number(data6));  // Her iki string de sayıya dönüştürülüp toplanır 40
+
+console.log(parseInt(data5) + parseInt(data6));  // Her iki string tam sayıya çevrilip toplanır
+
+console.log(parseFloat(data5) + parseFloat(data6));  // Ondalık olarak sayıya çevrilip toplanır
