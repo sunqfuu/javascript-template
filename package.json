@@ -1,12 +1,21 @@
 {
   "name": "js",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to the **JavaScript Learning Template**! This repository serves as a structured starting point for learning and practicing JavaScript.",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
   "main": "template.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunqfuu/javascript-template.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/sunqfuu/javascript-template/issues"
+  },
+  "homepage": "https://github.com/sunqfuu/javascript-template#readme"
 }
