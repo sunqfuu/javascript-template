@@ -125,23 +125,23 @@ console.log(Math.round(8.4)); // En yakın tam sayıya yuvarlama fonksiyonu (Bir
 
 console.log(Math.round(8.5)); // En yakın tam sayıya yuvarlama fonksiyonu (Bir sayıyı en yakın tam sayıya yuvarlar): 9
 
-console.log(Math.sin(8.5));  // Sinüs fonksiyonu (Radyan cinsinden sinüs değerini hesaplar)
+console.log(Math.sin(8.5)); // Sinüs fonksiyonu (Radyan cinsinden sinüs değerini hesaplar)
 
-console.log(Math.cos(8.5));  // Kosinüs fonksiyonu (Radyan cinsinden kosinüs değerini hesaplar)
+console.log(Math.cos(8.5)); // Kosinüs fonksiyonu (Radyan cinsinden kosinüs değerini hesaplar)
 
-console.log(Math.asin(-1));  // Arksinüs fonksiyonu (Verilen değerin ters sinüsünü hesaplar, sonucu radyan cinsindendir)
+console.log(Math.asin(-1)); // Arksinüs fonksiyonu (Verilen değerin ters sinüsünü hesaplar, sonucu radyan cinsindendir)
 
-console.log(Math.acos(-1));  // Ark kosinüs fonksiyonu (Verilen değerin ters kosinüsünü hesaplar, sonucu radyan cinsindendir)
+console.log(Math.acos(-1)); // Ark kosinüs fonksiyonu (Verilen değerin ters kosinüsünü hesaplar, sonucu radyan cinsindendir)
 
-console.log(Math.tan(-1));  // Tanjant fonksiyonu (Radyan cinsinden tanjant değerini hesaplar)
+console.log(Math.tan(-1)); // Tanjant fonksiyonu (Radyan cinsinden tanjant değerini hesaplar)
 
-console.log(1/Math.tan(-1));  // Kotanjant hesaplama (Tanjantın tersini alarak kotanjant hesaplanır)
+console.log(1 / Math.tan(-1)); // Kotanjant hesaplama (Tanjantın tersini alarak kotanjant hesaplanır)
 
-console.log(Math.random() * 1 + 10);  // Rastgele sayı üretme (10 ile 11 arasında rastgele bir sayı üretir)
+console.log(Math.random() * 1 + 10); // Rastgele sayı üretme (10 ile 11 arasında rastgele bir sayı üretir)
 
-console.log(Math.random() * 10 + 1);  // 1 ile 11 arasında rastgele bir sayı üretir.
+console.log(Math.random() * 10 + 1); // 1 ile 11 arasında rastgele bir sayı üretir.
 
-console.log(Math.floor(Math.random() * 10 + 1));  
+console.log(Math.floor(Math.random() * 10 + 1));
 // Rastgele tam sayı üretme (1 ile 10 arasında)
 //
 // Açıklama:
@@ -162,15 +162,15 @@ console.log(Math.floor(Math.random() * 10 + 1));
 
 //////////////////////////////////////////////
 // Escape Characters
-console.log("Hi \"Sunqfu Frontend");  // Ekranda çift tırnak kullanma (Escape karakteri ile tırnak içinde tırnak işareti yazdırma)
+console.log('Hi "Sunqfu Frontend'); // Ekranda çift tırnak kullanma (Escape karakteri ile tırnak içinde tırnak işareti yazdırma)
 
-console.log("Hi \'Sunqfu Frontend");  // Ekranda tek tırnak kullanma (Escape karakteri ile metin içinde tek tırnak işareti yazdırma)
+console.log("Hi 'Sunqfu Frontend"); // Ekranda tek tırnak kullanma (Escape karakteri ile metin içinde tek tırnak işareti yazdırma)
 
-console.log("Hi \'Sunqfu\n Frontend");  // Tek tırnak ve yeni satır karakteri kullanma (Escape karakterleri ile özel formatlama)
+console.log("Hi 'Sunqfu\n Frontend"); // Tek tırnak ve yeni satır karakteri kullanma (Escape karakterleri ile özel formatlama)
 
-console.log("Hi \'Sunqfu\n\t Frontend");  // Tek tırnak, yeni satır ve tab boşluğu kullanımı (Escape karakterleri ile özel formatlama)
+console.log("Hi 'Sunqfu\n\t Frontend"); // Tek tırnak, yeni satır ve tab boşluğu kullanımı (Escape karakterleri ile özel formatlama)
 
-console.log("Hi \'Sunqfu\r Frontend");  // Tek tırnak ve Satır başı (Carriage Return - \r) kullanımı
+console.log("Hi 'Sunqfu\r Frontend"); // Tek tırnak ve Satır başı (Carriage Return - \r) kullanımı
 
-console.log("Hi \'Sunqfu\n\r Frontend");  // Tek tırnak, yeni satır (\n) ve satır başı (\r) kullanımı
+console.log("Hi 'Sunqfu\n\r Frontend"); // Tek tırnak, yeni satır (\n) ve satır başı (\r) kullanımı
 
