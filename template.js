@@ -60,3 +60,38 @@
 //  Const
 // const companyName3="sunqfu FrontEnd JS HTML5";
 // console.error(companyName3);
+
+//////////////////////////////////////////////////////////////
+
+// Operator
+let sunqfuData1=23;
+let sunqfuData2=5;
+
+// Aritmetic Operators
+console.log(sunqfuData1+sunqfuData2);
+console.log(sunqfuData1*sunqfuData2);
+console.log(sunqfuData1%sunqfuData2);
+console.log(sunqfuData1-sunqfuData2);
+
+let result1=sunqfuData1-sunqfuData2;
+
+//Comparison Operators
+console.log(sunqfuData1>sunqfuData2);
+console.log(sunqfuData1<sunqfuData2);
+console.log(sunqfuData1==sunqfuData2);
+console.log(sunqfuData1===sunqfuData2);
+console.log(sunqfuData1!==sunqfuData2);
+
+// Assignment Operators
+const data1=10,data2="10";
+console.log(data1==data2);
+console.log(data1===data2);
+
+// Logical Operators
+const data3=true,data4=false;
+console.log(data3&&data4);
+console.log(data3||data4);
+
+// Prompt
+const userData=prompt("Please Enter Your Name");
+console.log(userData);
