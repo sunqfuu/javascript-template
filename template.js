@@ -174,3 +174,58 @@ console.log("Hi 'Sunqfu\r Frontend"); // Tek tırnak ve Satır başı (Carriage 
 
 console.log("Hi 'Sunqfu\n\r Frontend"); // Tek tırnak, yeni satır (\n) ve satır başı (\r) kullanımı
 
+/////////////////////////////////////////////////////////
+
+// Typeof
+
+let data = 44;  
+console.log(typeof data);  // Değişkenin veri türünü kontrol eder ("number" döndürür)
+
+
+let name = "sunqfu";  
+console.log(typeof name);  // Değişkenin veri türünü kontrol eder ("string" döndürür)
+
+
+let isLogin = true;  
+console.log(typeof isLogin);  // Değişkenin veri türünü kontrol eder ("boolean" döndürür)
+
+
+// Instanceof
+
+let objectInstance = new Number(44);  
+console.log(objectInstance instanceof Number);  // Değişkenin Number nesnesi olup olmadığını kontrol eder (true döndürür)
+
+
+// New - Null
+
+let dataNew = new Number(44);  
+console.log(dataNew);  // Number nesnesi olarak oluşturulan değeri yazdırır ([Number: 44], object türünde)
+
+dataNew = null;  
+console.log(dataNew);  // Değişkeni null yapar ve ekrana "null" yazdırır
+
+//Undefined
+let dataNumber;  
+console.log(dataNumber);  // Değişken tanımlandı ama değer atanmamış, "undefined" döndürür çözüm için dataNumber=99; yazılmalı
+
+// NaN
+
+let result = 10 / 10;  
+console.log(result);  // Bölme işlemini yapar ve ekrana "1" yazdırır
+
+let result2 = 10 / "10";  
+console.log(result2);  // "10" string'i sayıya dönüştürülüp 10'a bölünür // Sonuç: 1
+
+
+let result3 = 10 / "abcdgf";  
+console.log(result3); // "abcdgf" sayıya dönüştürülemez, sonuç NaN olur // Sonuç: NaN
+
+// If isNaN is True, it is not a Number
+console.log(isNaN(result3));  // Sonuç: true (çünkü result3 NaN)
+
+console.log(!isNaN(result3));  // Sonuç: false (çünkü result3 NaN)
+
+// Hoisting
+dataNumber2 = 55;  // dataNumber2'ye 55 atanır
+var dataNumber2;   // Tanımlama yapılır (hoisting ile)
+console.log(dataNumber2);  // Sonuç: 55
