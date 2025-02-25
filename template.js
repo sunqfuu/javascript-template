@@ -308,3 +308,36 @@ console.log(sunqfuMetinsel.concat(sunqfuMetinsel2)); // İki metni birleştirere
 console.log(sunqfuMetinsel.substring(3)); // `substring()` Metodu ile String'in Bir Bölümünü Alma
 
 console.log(sunqfuMetinsel.substring(0, 4)); // `substring()` Metodu ile String'in Belirli Bir Bölümünü Alma
+
+// Function Textual Operations
+//1
+function returnsuzParametresiz() { // Parametresiz ve Geri Dönüş Değeri Olmayan Fonksiyon
+  console.log("Merhaba Sunqfu");
+}
+returnsuzParametresiz(); // Fonksiyon Çağrıldı
+
+
+//2
+function returnsuzParametreli(kelime, number) { // Parametreli ve Geri Dönüş Değeri Olmayan Fonksiyon
+  console.log("Merhaba Sunqfu " + kelime + " " + number);
+}
+returnsuzParametreli("Javascript", 44); // Fonksiyon Çağrıldı
+
+
+//3
+
+function returnluParametreli() { // Parametresiz ve Geri Dönüş Değeri Olan Fonksiyon
+  return "Merhaba Sunqfu";
+}
+
+let param3 = returnluParametreli(); // Fonksiyon çağrıldı ve dönen değer değişkene atandı
+console.log(param3); // Değişkenin içeriği ekrana yazdırıldı
+
+//4
+
+function returnluParametreli(isLogin) { // Parametreli ve Geri Dönüş Değeri Olan Fonksiyon
+  return isLogin;
+}
+
+let param4 = returnluParametreli(true); // Fonksiyon çağrıldı ve dönen değer değişkene atandı
+console.log(param4); // Değişkenin içeriği ekrana yazdırıldı
