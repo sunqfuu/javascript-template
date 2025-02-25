@@ -281,7 +281,7 @@ console.log(parseFloat(data5) + parseFloat(data6)); // Ondalık olarak sayıya �
 ////////////////////////////////////////////////////////////////////
 // Textual Operations (Metinsel İşlemler)
 
-let sunqfuMetinsel = " javascript ÖğrReniyoRum javascript  ";
+let sunqfuMetinsel = " javascript ÖğReniyoRum javascript  ";
 
 let sunqfuMetinsel2 = " html5, css3, js";
 
