@@ -277,3 +277,33 @@ console.log(Number(data5) + Number(data6)); // Her iki string de sayıya dönü�
 console.log(parseInt(data5) + parseInt(data6)); // Her iki string tam sayıya çevrilip toplanır
 
 console.log(parseFloat(data5) + parseFloat(data6)); // Ondalık olarak sayıya çevrilip toplanır
+
+////////////////////////////////////////////////////////////////////
+// Textual Operations (Metinsel İşlemler)
+
+let sunqfuMetinsel = " javascript ÖğrReniyoRum javascript  ";  
+let sunqfuMetinsel2 = " html5, css3, js";  
+
+console.log(sunqfuMetinsel);  // Metni olduğu gibi ekrana yazdırır
+
+console.log(sunqfuMetinsel.length);  // Metnin karakter sayısını döndürür
+
+console.log(sunqfuMetinsel.trim().length);  // Baştaki ve sondaki boşlukları siler, kalan karakter sayısını döndürür
+
+console.log(sunqfuMetinsel.toUpperCase());  // Metni tamamen büyük harfe çevirir
+ 
+console.log(sunqfuMetinsel.toLowerCase());  // Metni tamamen küçük harfe çevirir
+
+console.log(sunqfuMetinsel.indexOf("javascript"));  // İlk "javascript" kelimesinin başladığı indexi döndürür
+
+console.log(sunqfuMetinsel.lastIndexOf("javascript"));  // Son "javascript" kelimesinin başladığı indexi döndürür
+
+console.log(sunqfuMetinsel.includes("javascript"));  // Metnin içinde "javascript" kelimesi olup olmadığını kontrol eder (true/false döner)
+
+console.log(sunqfuMetinsel + " " + sunqfuMetinsel2); // İki metni birleştirerek ekrana yazdırır 
+
+console.log(sunqfuMetinsel.concat(sunqfuMetinsel2)); // İki metni birleştirerek ekrana yazdırır (concat() yöntemiyle) 
+
+console.log(sunqfuMetinsel.substring(3)); // `substring()` Metodu ile String'in Bir Bölümünü Alma
+
+console.log(sunqfuMetinsel.substring(0, 4)); // `substring()` Metodu ile String'in Belirli Bir Bölümünü Alma
