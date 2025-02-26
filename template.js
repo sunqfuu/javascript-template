@@ -341,3 +341,27 @@ function returnluParametreli(isLogin) { // Parametreli ve Geri Dönüş Değeri 
 
 let param4 = returnluParametreli(true); // Fonksiyon çağrıldı ve dönen değer değişkene atandı
 console.log(param4); // Değişkenin içeriği ekrana yazdırıldı
+
+// Funticon Types (Funtion Türleri)
+// Inmedia Function
+
+(function() { // Anonim (İsimsiz) ve Kendiliğinden Çağrılan Fonksiyon (IIFE)
+  console.log("Inmedia Function - Anonymous Function");
+})(); // Fonksiyon tanımlandıktan hemen sonra çalıştırıldı
+
+(() => { // Kendiliğinden Çağrılan Arrow Function (IIFE)
+  console.log("Inmedia Function - Arrow Function");
+})(); // Fonksiyon tanımlandıktan hemen sonra çalıştırıldı
+
+//Normal Function
+function toplama(x, y) {return x + y; }// İki parametre alan ve toplamlarını döndüren fonksiyon
+
+console.log(toplama(5, 6)); // Fonksiyon çağrıldı ve sonucu ekrana yazdırıldı
+
+//Anonymous Function
+let toplama2=function(x,y) {return x+y;} // Anonim fonksiyon ile değişkene atanmış toplama fonksiyonu
+console.log(toplama2(5, 6)); // Doğru fonksiyon adıyla çağrıldı
+
+//Arrow Function
+const toplama3=(x,y) => {return x+y;} // Arrow Function (Ok Fonksiyonu) ile toplama işlemi
+console.log(toplama3(5, 6)); // Fonksiyon çağrıldı ve sonucu ekrana yazdırıldı
