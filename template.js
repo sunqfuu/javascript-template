@@ -414,13 +414,11 @@ conditional2(); // Fonksiyon çağrılıyor
 
 const conditional3 = () => {
   let isSunqfu = 0;
-  if ((isSunqfu) > 0) {
+  if (isSunqfu > 0) {
     console.log("Pozitif Sayı");
-  } 
-  else if (isSunqfu < 0) {
+  } else if (isSunqfu < 0) {
     console.log("Negatif Sayı");
-  } 
-  else {
+  } else {
     console.log("Sıfır");
   }
 };
@@ -429,4 +427,43 @@ conditional3();
 
 //////////////////////////////////////////////
 // Ternary Call
+const conditionalTernary = () => {
+  let isSunqfu = -9; // Değişkenin değeri -9 olarak atanıyor
+
+  // Ternary Operator Kullanımı
+  let result = isSunqfu > 0 ? "Pozitif Sayı" : "Negatif Sayı";
+
+  console.log(result); // Sonucu ekrana yazdır
+};
+
+conditionalTernary(); // Fonksiyonu çağır
+
 // Switch Case
+
+const conditionalSwitch = () => { 
+  let isSunqfu = 0; // Değişken değeri 0 olarak atanıyor
+
+  switch (isSunqfu) { // switch-case yapısı başlıyor
+    case 0: // Eğer isSunqfu 0 ise
+      console.log("Sıfır"); // "Sıfır" yazdır
+      break; // break ile switch'ten çık
+
+    case 1: // Eğer isSunqfu 1 ise
+      console.log("Bir"); // "Bir" yazdır
+      break;
+
+    case 2: // Eğer isSunqfu 2 ise
+      console.log("İki"); // "İki" yazdır
+      break;
+
+    case 3: // Eğer isSunqfu 3 ise
+      console.log("Üç"); // "Üç" yazdır
+      break;
+
+    default: // Eğer yukarıdaki case'lerin hiçbiri çalışmazsa
+      console.log("Bilinmiyor"); // "Bilinmiyor" yazdır
+  }
+};
+
+conditionalSwitch(); // Fonksiyonu çağır
+
