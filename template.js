@@ -311,22 +311,23 @@ console.log(sunqfuMetinsel.substring(0, 4)); // `substring()` Metodu ile String'
 
 // Function Textual Operations
 //1
-function returnsuzParametresiz() { // Parametresiz ve Geri Dönüş Değeri Olmayan Fonksiyon
+function returnsuzParametresiz() {
+  // Parametresiz ve Geri Dönüş Değeri Olmayan Fonksiyon
   console.log("Merhaba Sunqfu");
 }
 returnsuzParametresiz(); // Fonksiyon Çağrıldı
 
-
 //2
-function returnsuzParametreli(kelime, number) { // Parametreli ve Geri Dönüş Değeri Olmayan Fonksiyon
+function returnsuzParametreli(kelime, number) {
+  // Parametreli ve Geri Dönüş Değeri Olmayan Fonksiyon
   console.log("Merhaba Sunqfu " + kelime + " " + number);
 }
 returnsuzParametreli("Javascript", 44); // Fonksiyon Çağrıldı
 
-
 //3
 
-function returnluParametreli() { // Parametresiz ve Geri Dönüş Değeri Olan Fonksiyon
+function returnluParametreli() {
+  // Parametresiz ve Geri Dönüş Değeri Olan Fonksiyon
   return "Merhaba Sunqfu";
 }
 
@@ -335,7 +336,8 @@ console.log(param3); // Değişkenin içeriği ekrana yazdırıldı
 
 //4
 
-function returnluParametreli(isLogin) { // Parametreli ve Geri Dönüş Değeri Olan Fonksiyon
+function returnluParametreli(isLogin) {
+  // Parametreli ve Geri Dönüş Değeri Olan Fonksiyon
   return isLogin;
 }
 
@@ -345,23 +347,86 @@ console.log(param4); // Değişkenin içeriği ekrana yazdırıldı
 // Funticon Types (Funtion Türleri)
 // Inmedia Function
 
-(function() { // Anonim (İsimsiz) ve Kendiliğinden Çağrılan Fonksiyon (IIFE)
+(function () {
+  // Anonim (İsimsiz) ve Kendiliğinden Çağrılan Fonksiyon (IIFE)
   console.log("Inmedia Function - Anonymous Function");
 })(); // Fonksiyon tanımlandıktan hemen sonra çalıştırıldı
 
-(() => { // Kendiliğinden Çağrılan Arrow Function (IIFE)
+(() => {
+  // Kendiliğinden Çağrılan Arrow Function (IIFE)
   console.log("Inmedia Function - Arrow Function");
 })(); // Fonksiyon tanımlandıktan hemen sonra çalıştırıldı
 
 //Normal Function
-function toplama(x, y) {return x + y; }// İki parametre alan ve toplamlarını döndüren fonksiyon
+function toplama(x, y) {
+  return x + y;
+} // İki parametre alan ve toplamlarını döndüren fonksiyon
 
 console.log(toplama(5, 6)); // Fonksiyon çağrıldı ve sonucu ekrana yazdırıldı
 
 //Anonymous Function
-let toplama2=function(x,y) {return x+y;} // Anonim fonksiyon ile değişkene atanmış toplama fonksiyonu
+let toplama2 = function (x, y) {
+  return x + y;
+}; // Anonim fonksiyon ile değişkene atanmış toplama fonksiyonu
 console.log(toplama2(5, 6)); // Doğru fonksiyon adıyla çağrıldı
 
 //Arrow Function
-const toplama3=(x,y) => {return x+y;} // Arrow Function (Ok Fonksiyonu) ile toplama işlemi
+const toplama3 = (x, y) => {
+  return x + y;
+}; // Arrow Function (Ok Fonksiyonu) ile toplama işlemi
 console.log(toplama3(5, 6)); // Fonksiyon çağrıldı ve sonucu ekrana yazdırıldı
+
+// Conditional (Koşullu)
+const conditional = () => {
+  // Koşullu (if-else) Kontrolü Yapan Arrow Function
+  let isLogin = true;
+
+  // Farklı koşulların nasıl çalıştığını görmek için açıklamalar eklendi
+  if (isLogin) {
+    // `isLogin` zaten boolean (true) olduğu için bu blok çalışır.
+    //if(isLogin==="true"){
+    //if(isLogin=="true"){
+    //if(isLogin=true){
+
+    console.log("Giriş Yapıldı");
+  } else {
+    console.log("Giriş Yapılmadı");
+  }
+};
+
+conditional(); // Fonksiyon çağrıldı
+
+//////////////////////////////////////////////
+
+const conditional2 = () => {
+  // Sayının pozitif veya negatif olduğunu kontrol eden fonksiyon
+  let isSunqfu = -9; // Değer -9 olarak atanıyor
+
+  if (isSunqfu > 0) {
+    // Eğer sayı 0'dan büyükse
+    console.log("Positive");
+  } else {
+    console.log("Negative"); // Aksi halde (0 veya negatifse)
+  }
+};
+
+conditional2(); // Fonksiyon çağrılıyor
+
+const conditional3 = () => {
+  let isSunqfu = 0;
+  if ((isSunqfu) > 0) {
+    console.log("Pozitif Sayı");
+  } 
+  else if (isSunqfu < 0) {
+    console.log("Negatif Sayı");
+  } 
+  else {
+    console.log("Sıfır");
+  }
+};
+
+conditional3();
+
+//////////////////////////////////////////////
+// Ternary Call
+// Switch Case
