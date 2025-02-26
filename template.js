@@ -467,3 +467,32 @@ const conditionalSwitch = () => {
 
 conditionalSwitch(); // Fonksiyonu çağır
 
+//////////////////////////////////////////////////////////
+
+//Loop
+
+const forLoop = () => { 
+  let value = "Sunqfu"; // value değişkenine "Sunqfu" atanıyor
+
+  for (let i = 1; i <= 5; i++) { // Döngü 1’den 5’e kadar çalışacak
+    console.log(value + i); // "Sunqfu" + i değeri ekrana yazdırılıyor
+  }
+};
+
+forLoop(); // Fonksiyon çağrılıyor
+
+
+console.log("********************")
+// While
+
+const whileLoop = () => {
+  let value = "Kubrick"; // value değişkenine "Kubrick" atanıyor
+  let i = 1; // Sayaç değişkeni başlatılıyor
+
+  while (i <= 5) { // i, 5'e eşit veya küçük olduğu sürece çalışır
+    console.log(value + i); // Konsola "Kubrick" + i yazdırılır
+    i+=1; // Sayaç her seferinde 1 artırılır (Artırma Olmazsa Sonsuz Döngü Olur)
+  }
+};
+
+whileLoop(); // Fonksiyon çağrılıyor
