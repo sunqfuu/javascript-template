@@ -539,3 +539,18 @@ const exceptionHandling = () => {
 };
 
 exceptionHandling();
+
+//////////////////////////////////////////////////////////
+//Debug
+const debugData = () => {
+  let value = "Sunqfu Data";
+  for (let i = 1; i <= 5; i++) {
+    console.log(value + i * 1);
+
+    if (i === 4) {
+    }
+    debugger;
+  }
+};
+
+debugData();
