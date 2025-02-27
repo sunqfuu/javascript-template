@@ -560,7 +560,7 @@ const debugData = () => {
       // Boş if bloğu var. Buraya bir işlem eklenmezse gereksiz.
     }
 
-    debugger; // Tarayıcı geliştirici konsolunda burada kod duraklatılır.
+    //debugger; // Tarayıcı geliştirici konsolunda burada kod duraklatılır.
   }
 };
 
@@ -610,3 +610,62 @@ const setIntervalFunction2 = () => {
 };
 
 setIntervalFunction2(); // ✅ Fonksiyon çağrılıyor.
+
+///////////////////////////////////////////////////////////////
+//             Synchronous- Asynchronous //
+
+//Monad
+const monad = () => {
+  // First Function
+  const data1 = (number) => {
+    return Math.sqrt(number); //Karekök alma işlemi
+  };
+  // Second Function
+  const data2 = (number) => {
+    return Math.pow(number, 3); //Üstünü bulma
+  };
+  let result = data2(data1(25)); //Sonuç
+  console.log(result);
+};
+monad();
+
+// Callback Function
+const callbackFunction = () => {
+  // data1 fonksiyonu bir sayı alır ve 1 saniye sonra callback ile bu sayıyı döndürür
+  const data1 = (number, callback) => {
+    setTimeout(() => {
+      callback(number);
+    }, 1000);
+  };
+
+  // data2 fonksiyonu bir sayı alır ve 1 saniye sonra callback ile bu sayıyı döndürür
+  const data2 = (number, callback) => {
+    setTimeout(() => {
+      callback(number);
+    }, 1000);
+  };
+
+  // data3 fonksiyonu bir sayı alır ve 1 saniye sonra callback ile bu sayıyı döndürür
+  const data3 = (number, callback) => {
+    setTimeout(() => {
+      callback(number);
+    }, 1000);
+  };
+
+  // İlk olarak data1 fonksiyonu çağrılıyor, başlangıç değeri 44 olarak veriliyor
+  data1(44, (number1) => {
+    console.log("data1 " + number1); // 1 saniye sonra ekrana "data1 44" yazılır
+
+    // data1 tamamlandıktan sonra data2 çağrılıyor
+    data2(number1, (number2) => {
+      console.log("data2 " + number2); // 2. saniyede ekrana "data2 44" yazılır
+
+      // data2 tamamlandıktan sonra data3 çağrılıyor
+      data3(number2, (number3) => {
+        console.log("data3 " + number3); // 3. saniyede ekrana "data3 44" yazılır
+      });
+    });
+  });
+};
+
+callbackFunction(); // callbackFunction fonksiyonu çağrılarak işlemler başlatılır
