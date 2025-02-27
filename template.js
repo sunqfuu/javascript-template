@@ -671,17 +671,58 @@ const promiseFunction = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (isLogin) {
-          console.log(number + " Promise Çağırıldı"); // Eğer giriş yapılmışsa mesaj yazdırılır
+          console.log(number + " Promise Çağırıldı"); // Giriş başarılıysa mesaj yazdır
           resolve(number); // Promise başarılı şekilde tamamlanır ve number değeri döndürülür
         } else {
-          reject("Promise Çağırılamadı"); // Eğer giriş yapılmamışsa hata döndürülür
+          reject("Promise Çağırılamadı"); // Giriş başarısızsa hata fırlat
         }
       }, 1000); // 1 saniye bekletme
     });
   }
 
-  let result = data1(12); // Fonksiyon çağrılıyor ancak hemen bir sonuç dönmez (Promise döner)
-  console.log(result); // Burada Promise henüz tamamlanmadığı için "Promise { <pending> }" yazdırılır
+  // data1 fonksiyonunu çağırırken .then() ve .catch() kullanmalıyız
+  data1(12)
+    .then((response) => {
+      console.log("Response: " + response); // Eğer resolve olursa çalışır
+    })
+    .catch((err) => {
+      console.error("Hata:", err); // Eğer reject olursa buraya düşer
+    });
 };
 
 promiseFunction();
+
+//////////////////////////////////////////////////////////////
+
+// Async Await Function
+const asyncAwaitFunction = () => {
+  function promiseFunction(number) {
+    const isLogin = true; // Kullanıcının giriş yapıp yapmadığını kontrol eden değişken
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (isLogin) {
+          console.log(number + " Promise Çağırıldı"); // Eğer giriş yapılmışsa mesaj yazdırılır
+          resolve(number); // Promise başarılı olursa verilen değer döndürülür
+        } else {
+          reject("Promise Çağırılamadı"); // Eğer giriş yapılmamışsa hata fırlatılır
+        }
+      }, 1000);
+    });
+  }
+
+  let asyncAwaitData = async () => {
+    try {
+      let result = await promiseFunction(33); // `await` ile Promise sonucunu bekliyoruz
+      console.log("Sonuç:", result); // resolve edilen değeri yazdırıyoruz
+      console.log("AsyncData"); // Bu satır, Promise tamamlandıktan sonra çalışacak
+    } catch (error) {
+      console.error("Hata:", error); // Eğer `reject` olursa buraya düşer
+    }
+  };
+
+  asyncAwaitData(); // Asenkron fonksiyonu çağırıyoruz
+};
+
+asyncAwaitFunction();
+
+////////////////////////////////////////////////////////
