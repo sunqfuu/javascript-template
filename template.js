@@ -515,3 +515,24 @@ const doWhileLoop = () => {
 };
 
 doWhileLoop();
+ 
+///////////////////////////////////////////////////////////////////
+//Exception Handling
+const exceptionHandling = () => {
+  // const result=10/0;
+  try{
+  alertx("alert");
+} catch (err) {
+  console.error(err);
+} finally {
+  console.warn("Burası Mutlaka Çalışmalıdır");
+}
+  console.log("Hiiii-1");
+
+  //Throw Error
+  throw new Error("Hata Oluştu");
+
+  console.log("Hiiii-2");
+};
+
+exceptionHandling();
