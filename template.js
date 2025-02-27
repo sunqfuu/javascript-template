@@ -505,7 +505,7 @@ console.log("********************");
 // Do While
 
 const doWhileLoop = () => {
-  let value = "Sunqfu do while"; // value değişkenine "Sunqfu" atanıyor
+  let value = "Sunqfu doWhile"; // value değişkenine "Sunqfu" atanıyor
   let i = 1; // Sayaç değişkeni başlatılıyor
 
   do {
