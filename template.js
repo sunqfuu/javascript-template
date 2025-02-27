@@ -440,10 +440,12 @@ conditionalTernary(); // Fonksiyonu çağır
 
 // Switch Case
 
-const conditionalSwitch = () => { 
+const conditionalSwitch = () => {
   let isSunqfu = 0; // Değişken değeri 0 olarak atanıyor
 
-  switch (isSunqfu) { // switch-case yapısı başlıyor
+  switch (
+    isSunqfu // switch-case yapısı başlıyor
+  ) {
     case 0: // Eğer isSunqfu 0 ise
       console.log("Sıfır"); // "Sıfır" yazdır
       break; // break ile switch'ten çık
@@ -471,28 +473,45 @@ conditionalSwitch(); // Fonksiyonu çağır
 
 //Loop
 
-const forLoop = () => { 
-  let value = "Sunqfu"; // value değişkenine "Sunqfu" atanıyor
+const forLoop = () => {
+  let value = "Sunqfu for"; // value değişkenine "Sunqfu" atanıyor
 
-  for (let i = 1; i <= 5; i++) { // Döngü 1’den 5’e kadar çalışacak
+  for (let i = 1; i <= 5; i++) {
+    // Döngü 1’den 5’e kadar çalışacak
     console.log(value + i); // "Sunqfu" + i değeri ekrana yazdırılıyor
   }
 };
 
 forLoop(); // Fonksiyon çağrılıyor
 
-
-console.log("********************")
+console.log("********************");
 // While
 
 const whileLoop = () => {
-  let value = "Kubrick"; // value değişkenine "Kubrick" atanıyor
+  let value = "Kubrick while"; // value değişkenine "Kubrick" atanıyor
   let i = 1; // Sayaç değişkeni başlatılıyor
 
-  while (i <= 5) { // i, 5'e eşit veya küçük olduğu sürece çalışır
+  while (i <= 5) {
+    // i, 5'e eşit veya küçük olduğu sürece çalışır
     console.log(value + i); // Konsola "Kubrick" + i yazdırılır
-    i+=1; // Sayaç her seferinde 1 artırılır (Artırma Olmazsa Sonsuz Döngü Olur)
+    i += 1; // Sayaç her seferinde 1 artırılır (Artırma Olmazsa Sonsuz Döngü Olur)
   }
 };
 
 whileLoop(); // Fonksiyon çağrılıyor
+
+console.log("********************");
+
+// Do While
+
+const doWhileLoop = () => {
+  let value = "Sunqfu do while"; // value değişkenine "Sunqfu" atanıyor
+  let i = 1; // Sayaç değişkeni başlatılıyor
+
+  do {
+    console.log(value + i); // Konsola "Sunqfu" + i yazdırılır
+    i += 1; // Sayaç her seferinde 1 artırılır
+  } while (i <= 5); // i, 5'e eşit veya küçük olduğu sürece çalışır
+};
+
+doWhileLoop();
