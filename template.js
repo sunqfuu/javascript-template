@@ -519,38 +519,94 @@ doWhileLoop();
 ///////////////////////////////////////////////////////////////////
 //Exception Handling
 const exceptionHandling = () => {
-  // const result=10/0;
-  try {
-    alertx("alert");
-  } catch (err) {
-    console.error(err);
-  } finally {
-    console.warn("Burası Mutlaka Çalışmalıdır");
-  }
-  console.log("Hiiii-1");
+  // const result=10/0; // JavaScript'te 10/0 "Infinity" döndürür, hata vermez.
 
-  //Throw Error
   try {
-    throw new Error("Hata Oluştu");
+    alertx("alert"); // ❌ alertx fonksiyonu tanımlı değil, bu bir hata oluşturur.
   } catch (err) {
-    console.error("Yakalanan hata:", err.message);
+    console.error(err); // Hata yakalanır ve konsola yazdırılır.
+  } finally {
+    console.warn("Burası Mutlaka Çalışmalıdır"); // ✅ Hata olsa da olmasa da çalışır.
   }
-  console.log("Hiiii-2");
+
+  console.log("Hiiii-1"); // ✅ `finally` bloğundan sonra çalışmaya devam eder.
 };
 
-exceptionHandling();
+exceptionHandling(); // Fonksiyon çağrılır ve çalıştırılır.
+
+//Throw Error
+const exceptionHandling2 = () => {
+  try {
+    throw new Error("Hata Oluştu"); // 🚨 Manuel olarak bir hata fırlatıyoruz.
+  } catch (err) {
+    console.error("Yakalanan hata:", err.message); // ✅ Hata yakalanıyor ve mesaj yazdırılıyor.
+  }
+
+  console.log("Hiiii-2"); // ✅ Hata yakalandığı için fonksiyon durmaz, bu satır çalışmaya devam eder.
+};
+
+exceptionHandling2(); // ✅ Fonksiyon çağrılıyor ve çalıştırılıyor.
 
 //////////////////////////////////////////////////////////
 //Debug
 const debugData = () => {
-  let value = "Sunqfu Data";
+  let value = "Sunqfu Data"; // Değişken tanımlandı.
+
   for (let i = 1; i <= 5; i++) {
-    console.log(value + i * 1);
+    // Döngü i = 1'den başlayarak 5'e kadar devam eder.
+    console.log(value + i * 1); // "Sunqfu Data1", "Sunqfu Data2", ..., "Sunqfu Data5" olarak yazdırır.
 
     if (i === 4) {
+      // Boş if bloğu var. Buraya bir işlem eklenmezse gereksiz.
     }
-    debugger;
+
+    debugger; // Tarayıcı geliştirici konsolunda burada kod duraklatılır.
   }
 };
 
-debugData();
+debugData(); // Fonksiyon çağrılır ve çalıştırılır.
+
+///////////////////////////////////////////////////////////////
+//Set Time Out
+
+const setTimeoutFunction = () => {
+  setTimeout(() => {
+    // 3 saniye sonra çalışacak fonksiyon
+    console.log("3 saniye sonra çalıştı ve durdu");
+  }, 3000);
+};
+
+setTimeoutFunction(); // ✅ Fonksiyon çağrılıyor, böylece çalışır.
+
+console.log("********************");
+
+//Anonymous Function
+// 4 saniye sonra çalışan fonksiyon
+setTimeout(function () {
+  console.log("4 saniye sonra çalıştı ve durdu");
+}, 4000);
+
+// Eğer setTimeoutFunction adlı bir fonksiyon varsa, onu çağırabilirsiniz.
+setTimeoutFunction(); // ✅ Doğru fonksiyon adı olmalı
+
+//setinterval
+// 5 saniyede bir çalışan fonksiyon
+setInterval(function () {
+  console.log("5 saniye aralıklarla çalıştı");
+}, 5000);
+
+//Clocktime
+const setIntervalFunction2 = () => {
+  let clockTime = () => {
+    console.log("Saat çalışıyor: " + new Date().toLocaleTimeString());
+  };
+
+  let intervalID = setInterval(clockTime, 2500); // ✅ Doğru kullanım: Fonksiyon çağrısı yerine referans verildi.
+
+  setTimeout(() => {
+    clearInterval(intervalID); // ✅ 5 saniye sonra interval durduruluyor.
+    console.log("5 Saniye sonra interval durduruldu!");
+  }, 5000);
+};
+
+setIntervalFunction2(); // ✅ Fonksiyon çağrılıyor.
