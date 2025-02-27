@@ -631,41 +631,57 @@ monad();
 
 // Callback Function
 const callbackFunction = () => {
-  // data1 fonksiyonu bir sayı alır ve 1 saniye sonra callback ile bu sayıyı döndürür
   const data1 = (number, callback) => {
     setTimeout(() => {
       callback(number);
     }, 1000);
   };
 
-  // data2 fonksiyonu bir sayı alır ve 1 saniye sonra callback ile bu sayıyı döndürür
   const data2 = (number, callback) => {
     setTimeout(() => {
       callback(number);
     }, 1000);
   };
 
-  // data3 fonksiyonu bir sayı alır ve 1 saniye sonra callback ile bu sayıyı döndürür
   const data3 = (number, callback) => {
     setTimeout(() => {
       callback(number);
     }, 1000);
   };
 
-  // İlk olarak data1 fonksiyonu çağrılıyor, başlangıç değeri 44 olarak veriliyor
   data1(44, (number1) => {
-    console.log("data1 " + number1); // 1 saniye sonra ekrana "data1 44" yazılır
-
-    // data1 tamamlandıktan sonra data2 çağrılıyor
+    console.log("data1 " + number1);
     data2(number1, (number2) => {
-      console.log("data2 " + number2); // 2. saniyede ekrana "data2 44" yazılır
-
-      // data2 tamamlandıktan sonra data3 çağrılıyor
+      console.log("data2 " + number2);
       data3(number2, (number3) => {
-        console.log("data3 " + number3); // 3. saniyede ekrana "data3 44" yazılır
+        console.log("data3 " + number3);
       });
     });
   });
 };
 
-callbackFunction(); // callbackFunction fonksiyonu çağrılarak işlemler başlatılır
+callbackFunction();
+
+//////////////////////////////////////////////////
+//Promise
+const promiseFunction = () => {
+  function data1(number) {
+    const isLogin = false; // Kullanıcının giriş yapıp yapmadığını kontrol eden değişken
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (isLogin) {
+          console.log(number + " Promise Çağırıldı"); // Eğer giriş yapılmışsa mesaj yazdırılır
+          resolve(number); // Promise başarılı şekilde tamamlanır ve number değeri döndürülür
+        } else {
+          reject("Promise Çağırılamadı"); // Eğer giriş yapılmamışsa hata döndürülür
+        }
+      }, 1000); // 1 saniye bekletme
+    });
+  }
+
+  let result = data1(12); // Fonksiyon çağrılıyor ancak hemen bir sonuç dönmez (Promise döner)
+  console.log(result); // Burada Promise henüz tamamlanmadığı için "Promise { <pending> }" yazdırılır
+};
+
+promiseFunction();
