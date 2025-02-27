@@ -726,3 +726,56 @@ const asyncAwaitFunction = () => {
 asyncAwaitFunction();
 
 ////////////////////////////////////////////////////////
+//Array
+
+const arrayFunction = () => {
+  let array = [1, 2, 3, 4, 5, 6]; // 6 elemanlı bir dizi tanımlandı
+  array[6] = 7; // 7. indeksine (7. elemanına) 7 değeri atandı
+  array[7] = 8; // 8. indeksine (8. elemanına) 8 değeri atandı
+  array[8] = 9; // 9. indeksine (9. elemanına) 9 değeri atandı
+
+  console.log(array); // Konsola dizinin tamamı yazdırılır
+
+  document.writeln(array); // Sayfaya dizinin tamamı yazdırılır
+  document.writeln("<br/>");
+
+  document.writeln(array[0]); // İlk elemanı yazdırır → 1
+  document.writeln(array[8 - 1]); // 7. indeksteki elemanı yazdırır → 8
+  document.writeln(array[8]); // 8. indeksteki elemanı yazdırır → 9
+
+  document.writeln("<br/>");
+  document.writeln("length: " + array.length); // Dizinin uzunluğunu yazdırır → 9
+  document.writeln(array[array.length - 1]); // Son elemanı yazdırır → 9
+};
+
+arrayFunction();
+
+///////////////////////////////////////////////////////////////
+
+const arrayDataSet = () => {
+  let array = [9, 1, 2, 6, 3, 5, 4];
+  return array;
+};
+//Iterative For
+const arrayLoop = () => {
+  let array = arrayDataSet();
+  for (let i = 0; i < array.length; i++) {
+    document.writeln(array[i]);
+  }
+
+  document.writeln("<br/>****<br/>");
+
+  // For In
+  for (let data1 in array) {
+    // document.writeln(data1);
+    document.writeln(array[data1]);
+  }
+  document.writeln("<br/>****<br/>");
+  // For Of
+  for (let data2 of array) {
+    // document.writeln(data1);
+    document.writeln(data2);
+  }
+};
+
+arrayLoop();
