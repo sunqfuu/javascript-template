@@ -968,3 +968,36 @@ const data7 = () => {
   console.log(htmlTemplateSunqfu);
 };
 data7();
+
+//////////////////////////////////////////////
+// Object
+const data8 = () => {
+  const sunqfuFullstack = {
+    brand: "Sunqfu",
+    model: "Fullstack",
+    year: "2025",
+    isLogin: false,
+    start: function () {
+      // let data=this.brand+" "+"Fullstack Learning"
+      let data = `${this.brand} Fullstack Learning`;
+      console.log(data);
+    },
+    dizi: [0, 44, 2, 3],
+  };
+  console.log(sunqfuFullstack);
+  console.log(sunqfuFullstack.brand);
+  console.log(sunqfuFullstack.brand.toUpperCase());
+  console.log(sunqfuFullstack.model);
+  console.log(sunqfuFullstack.year);
+  if (sunqfuFullstack.isLogin) console.log("Giriş Yapıldı");
+  else console.log("Giriş Yapılmadı");
+  sunqfuFullstack.start();
+  sunqfuFullstack.fullstack = {
+    name: "Html5",
+    year: "2025",
+  };
+  console.log(sunqfuFullstack.fullstack.name);
+  console.log(sunqfuFullstack["fullstack"]["name"]);
+  console.log(sunqfuFullstack.dizi[1]);
+};
+data8();
