@@ -777,5 +777,44 @@ const arrayLoop = () => {
     document.writeln(data2);
   }
 };
+// arrayLoop();
 
-arrayLoop();
+//Dizile Push, Unshift, Pop, Shift, Delete
+const arrayMethod1 = () => {
+  let array = arrayDataSet();
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+  //Push (Sona Ekleme)
+  array.push(33, 44, 16);
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+  //Unshift (Sona Ekleme)
+  array.unshift(11, 22, 41);
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+  //Pop (Sondan Eleman Silme)
+  array.pop();
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+  //Shift (Sondan Eleman Silme)
+  array.shift();
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+  //delete (Belirtilen Eleman Silme Yerine undefined Atama Dizi Uzunluğunu Değiştirme)
+  delete array[0];
+  delete array[1];
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+};
+arrayMethod1();
