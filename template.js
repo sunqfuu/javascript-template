@@ -894,4 +894,45 @@ const arrayMethod3 = () => {
   });
 };
 
-arrayMethod3();
+// arrayMethod3();
+
+///////////////////////////////////////
+// Map, Filter
+const arrayMethod4 = () => {
+  let array = arrayDataSet();
+  let cloneArray = array;
+  cloneArray.forEach((response) => {
+    document.writeln(response);
+  });
+  document.writeln("<br/>***********************<br/>");
+  //Filter
+  let filterSunqfuNumbers = cloneArray
+    .filter((response) => {
+      return response > 5;
+    })
+    .forEach((response) => {
+      document.writeln(response);
+    });
+  document.writeln("<br/>***********************<br/>");
+  // Map
+  let filterSunqfuNumbers2 = cloneArray
+    .map((response) => {
+      return response * 2;
+    })
+    .forEach((response) => {
+      document.writeln(response);
+    });
+
+  document.writeln("<br/>***********************<br/>");
+  let filterSunqfuNumbers3 = cloneArray
+    .filter((response) => {
+      return response > 5;
+    })
+    .map((response) => {
+      return response * 2;
+    })
+    .forEach((response) => {
+      document.writeln(response);
+    });
+};
+arrayMethod4();
