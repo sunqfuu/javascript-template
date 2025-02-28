@@ -1001,3 +1001,25 @@ const data8 = () => {
   console.log(sunqfuFullstack.dizi[1]);
 };
 data8();
+
+/////////////////////////////////////////////////////////
+// Object Stringfy
+const data9 = () => {
+  const sunqfuFullstack = {
+    brand: "Sunqfu",
+    model: "Fullstack",
+    year: "2025",
+    isLogin: true,
+  };
+  // String Convert
+  let jsonString = JSON.stringify(sunqfuFullstack);
+  jsonString = jsonString.toUpperCase();
+  console.log(jsonString);
+
+  //Paser
+  let sunqfu = JSON.parse(jsonString);
+  console.log(sunqfu);
+  console.log(sunqfu.brand);
+};
+
+data9();
