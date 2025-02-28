@@ -839,17 +839,59 @@ const arrayMethod2 = () => {
     document.writeln(data2);
   }
   document.writeln("<br/>****<br/>");
-  //Sort (), Reverse ()
-  
+  Sort(), Reverse();
+
   // array.sort().reverse();
   // for (let data2 of array) {
   //   document.writeln(data2);
   // }
   // document.writeln("<br/>****<br/>");
 
-  array.sort().reverse().forEach((response)=>{
+  array
+    .sort()
+    .reverse()
+    .forEach((response) => {
+      document.writeln(response);
+    });
+};
+// arrayMethod2();
+/////////////////////////////////////////////////
+// Diziler Splice and Slice
+const arrayMethod3 = () => {
+  let array = arrayDataSet(); // arrayDataSet() fonksiyonunun tanımlı olması gerekir.
+  let cloneArray = array; // Bağımsız bir kopya oluştur
+
+  cloneArray.forEach((response) => {
     document.writeln(response);
-  
+  });
+
+  document.writeln("<br/>****<br/>");
+
+  // Splice - 3. indeksten başlayarak 2 elemanı sil
+  cloneArray.splice(3, 2);
+
+  cloneArray.forEach((response) => {
+    document.writeln(response);
+  });
+
+  document.writeln("<br/>****<br/>");
+
+  // Splice - 1. indekse 44 ve 45 ekle
+  cloneArray.splice(1, 0, 44, 45);
+
+  cloneArray.forEach((response) => {
+    document.writeln(response);
+  });
+  document.writeln("<br/>****<br/>");
+  //Slice
+  let cloneArray2 = array;
+  cloneArray2.slice(1, 4).forEach((response) => {
+    document.writeln(response);
+  });
+  document.writeln(response);
+  cloneArray2.forEach((response) => {
+    document.writeln(response);
   });
 };
-arrayMethod2();
+
+arrayMethod3();
