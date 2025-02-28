@@ -936,3 +936,35 @@ const arrayMethod4 = () => {
     });
 };
 arrayMethod4();
+//////////////////////////////////////////////////
+//Multiline
+const data7 = () => {
+  let multilineSunqfu = `1.Satır
+  2.Satır
+  3.satır
+  `;
+  console.log(multilineSunqfu);
+
+  //Interpolation
+  let sunqfuName = "Fullstack";
+  let sunqfuTech1 = "Html5";
+  let sunqfuTech2 = "Css3";
+  let sunqfuTech3 = "JSS";
+  console.log(
+    sunqfuName + " " + sunqfuTech1 + " " + sunqfuTech2 + " " + sunqfuTech3
+  );
+  console.log(`${sunqfuName} ${sunqfuTech1} ${sunqfuTech2} ${sunqfuTech3}`);
+
+  // Html5 Template
+  let normSunqfu = "<ul>" + "<li>Merhaba</li>" + "<li>Merhaba-2</li>" + "</ul>";
+  console.log(normSunqfu);
+
+  let htmlTemplateSunqfu = `
+  <ul>
+  <li>Merhaba</li>
+  <li>Merhaba-2</li>
+  </ul>
+  `;
+  console.log(htmlTemplateSunqfu);
+};
+data7();
