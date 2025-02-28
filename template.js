@@ -818,3 +818,38 @@ const arrayMethod1 = () => {
   }
 };
 arrayMethod1();
+document.writeln("<br/>****<br/>");
+////////////////////////////////////////////////////////
+const arrayMethod2 = () => {
+  let array = arrayDataSet();
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+  ///Sort
+  array.sort();
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+
+  //Reverse
+  array.reverse();
+  for (let data2 of array) {
+    document.writeln(data2);
+  }
+  document.writeln("<br/>****<br/>");
+  //Sort (), Reverse ()
+  
+  // array.sort().reverse();
+  // for (let data2 of array) {
+  //   document.writeln(data2);
+  // }
+  // document.writeln("<br/>****<br/>");
+
+  array.sort().reverse().forEach((response)=>{
+    document.writeln(response);
+  
+  });
+};
+arrayMethod2();
