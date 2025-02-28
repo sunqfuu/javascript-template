@@ -1016,7 +1016,7 @@ const data9 = () => {
   jsonString = jsonString.toUpperCase();
   console.log(jsonString);
 
-  //Paser
+  //Parse
   let sunqfu = JSON.parse(jsonString);
   console.log(sunqfu);
   console.log(sunqfu.brand);
