@@ -1115,3 +1115,36 @@ let sunqfuAddEventListener = () => {
 };
 
 sunqfuAddEventListener();
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//                               Local Storage
+let sunqfuLocalStorage = () => {
+  console.log("Local Storage");
+
+  let dataObject = {
+    data1: "Sunqfu",
+    data2: "Fullstack",
+    data3: "Html5",
+    data4: "Css3",
+    data5: "Jss",
+  };
+
+  //Set
+  localStorage.setItem("username", "dataObject");
+  localStorage.setItem("password", "Parolanız");
+
+  //Get
+  const username = localStorage.getItem("username");
+  const password = localStorage.getItem("password");
+
+  console.log("Username:", username);
+  console.log("Password:", password);
+
+  //Delete
+  // localStorage.removeItem("username");
+
+  //All Delete
+  // localStorage.clear();
+};
+
+sunqfuLocalStorage();
