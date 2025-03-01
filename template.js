@@ -1148,3 +1148,43 @@ let sunqfuLocalStorage = () => {
 };
 
 sunqfuLocalStorage();
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//     Document Object Model (DOM)
+
+let sunqfuDom = () => {
+  console.log("Dom Data");
+  let heading, paragraph, paragraph2, paragraph3, button;
+  let query1, query2;
+
+  // Heading
+  heading = document.getElementById("sunqfu_h1");
+  heading.textContent = "Sunqfu Heading";
+
+  //Parag Class
+  paragraph = document.getElementsByClassName("sunqfu_parag")[0];
+  paragraph.innerHTML =
+    "<b><mark>change the paragraph dolor sit amet consectetur adipisicing elit</mark></b>";
+  // paragraph.innerText="<b><mark>change the paragraph dolor sit amet consectetur adipisicing elit</mark></b>";
+
+  //Parag Name
+  paragraph2 = document.getElementsByName("sunqfu_parag2")[0];
+  paragraph2.innerText = "Paragraph Name Id";
+
+  //Parag Tag
+  paragraph3 = document.getElementsByTagName("p")[2];
+  paragraph3.innerText = "Paragraph Tag Name";
+  paragraph3.style.color = "red";
+  paragraph3.style.backgroundColor = "black";
+  paragraph3.style.padding = "2rem";
+  paragraph3.style.paddingTop = "5rem";
+
+  //Parag Query Selector
+  query1 = document.querySelector("#querySelector1");
+  query1.innerText = "Query Selector ID";
+
+  query2 = document.querySelector(".querySelector2");
+  query2.innerText = "Query Selector Class";
+};
+
+// sunqfuDom();
