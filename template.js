@@ -1076,3 +1076,28 @@ const bindSunqfu = () => {
 };
 
 bindSunqfu();
+
+////////////////////////////////////////////////////////////
+//Event
+let sunqfuOnclick = () => {
+  alert("1 kere tıklandı");
+};
+
+let sunqfuDblclick = () => {
+  console.log("Sunqfu Dbl Onclick");
+  alert("2 kere tıklandı");
+};
+
+let onmousewheelClick = () => {
+  console.log("mouse wheel");
+  alert("mouse wheel");
+};
+
+let onkeydownClick = () => {
+  console.log("onkeydownClick");
+  alert("onkeydownClick");
+};
+let onkeyupClick = () => {
+  console.log("onkeyupClick");
+  alert("onkeyupClick");
+};
