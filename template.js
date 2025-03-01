@@ -1101,3 +1101,17 @@ let onkeyupClick = () => {
   console.log("onkeyupClick");
   alert("onkeyupClick");
 };
+/////////////////////////////////////////////////////////////////////////////////////
+//                          Add Event Listener
+
+let sunqfuAddEventListener = () => {
+  console.log("sunqfuAddEventListener");
+
+  let buttonId = document.getElementById("addEventSunqfu");
+  buttonId.addEventListener("click", () => {
+    alert("Add Event Listener");
+    console.log("Even Listener Calıstı");
+  });
+};
+
+sunqfuAddEventListener();
