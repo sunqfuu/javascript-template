@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/sunqfuu/javascript-template/issues"
   },
-  "homepage": "https://github.com/sunqfuu/javascript-template#readme"
+  "homepage": "https://github.com/sunqfuu/javascript-template#readme",
+  "dependencies": {
+    "react-router-dom": "^5.2.0"
+  }
 }

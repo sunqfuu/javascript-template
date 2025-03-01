@@ -1000,7 +1000,7 @@ const data8 = () => {
   console.log(sunqfuFullstack["fullstack"]["name"]);
   console.log(sunqfuFullstack.dizi[1]);
 };
-data8();
+// data8();
 
 /////////////////////////////////////////////////////////
 // Object Stringfy
@@ -1022,4 +1022,57 @@ const data9 = () => {
   console.log(sunqfu.brand);
 };
 
-data9();
+// data9();
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Call
+const callSunqfu = () => {
+  // Function
+  const sunqfuFunction = function (data) {
+    console.log("call " + data + " " + this.company);
+    console.log("Hello, World!");
+  };
+
+  // Object
+  const sunqfuObject = {
+    company: "Sunqfu Company",
+  };
+
+  // Call the function with the context of the object
+  sunqfuFunction.call(sunqfuObject, "Fullstack Data44");
+};
+
+callSunqfu();
+
+//Apply
+const applySunqfu = () => {
+  //Function
+  function sunqfuFunction(data) {
+    console.log("Apply " + data + " " + this.company);
+  }
+
+  //Object
+  let sunqfuObject = {
+    company: "Sunqfu Company",
+  };
+
+  sunqfuFunction.apply(sunqfuObject, ["Fullstack Dizi"]);
+};
+applySunqfu();
+
+//Bind
+const bindSunqfu = () => {
+  //Function
+  function sunqfuFunction(data) {
+    console.log("Bind " + data + " " + this.company);
+  }
+
+  //Object
+  let sunqfuObject = {
+    company: "Sunqfu Company",
+  };
+
+  let result = sunqfuFunction.bind(sunqfuObject); // Fonksiyonu objeye bağla
+  result("Frontend JS"); // Bağlı fonksiyonu çağır
+};
+
+bindSunqfu();
