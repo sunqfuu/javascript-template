@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Javascript Login Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-gray-400 flex items-center justify-center h-screen w-screen">
+    <noscript>Your Browser Doens't Support Javascript</noscript>
+
+    <!-- Codes Start Here -->
+    <main>
+      <section class="bg-white p-8 rounded shadow-md w-96">
+        <h2 class="text-2xl text-center mb-7 font-semibold">Login</h2>
+        <form action="#" method="get" id="sunqfuLoginForm" onsubmit="return validateForm()">
+          <!-- E-Mail -->
+          <div class="mb-4">
+            <label for="uemail" class="block text-sm text-black font-medium"
+              >E-Mail</label
+            >
+            <input
+              type="email"
+              placeholder="Your Email"
+              id="uemail"
+              name="uemail"
+              class="block mt-2 p-3 text-sm text-black font-medium border w-full rounded border-blue-200"
+              title="E-mail"
+              autofocus
+              required
+            />
+          </div>
+          <!-- Password -->
+          <div>
+            <label for="upassword" class="block text-sm text-black font-medium"
+              >Password</label
+            >
+            <input
+              type="password"
+              placeholder="Your Password"
+              id="upassword"
+              class="block mt-2 p-3 text-sm text-black font-medium border w-full rounded border-blue-200"
+              title="Password"
+              name="upassword"
+              required
+            />
+          </div>
+
+          <button
+            class="block mt-2 p-3 text-sm text-black font-medium border w-full rounded border-white bg-gray-300 hover:bg-blue-500 hover:text-white"
+            type="submit"
+          >
+            Log In
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Codes End Here -->
+     <!-- External JS -->
+      <script src="login.js"></script>
+  </body>
+</html>
