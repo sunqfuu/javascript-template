@@ -20,7 +20,7 @@ const validateForm = () => {
   if (password != repassword) {
     alert("Password and Confirm Password do not match");
     return false;
-  }else{
+  } else {
     alert("Password and Confirm Password match");
   }
 
