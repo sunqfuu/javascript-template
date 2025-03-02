@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Javascript Login Page</title>
+    <title>Javascript Login - Register Page</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -15,7 +15,7 @@
     <!-- Codes Start Here -->
     <main>
       <section class="bg-white p-8 rounded shadow-md w-96">
-        <h2 class="text-2xl text-center mb-7 font-semibold">Login</h2>
+        <h2 class="text-2xl text-center mb-7 font-semibold">Login - Register</h2>
         <form action="#" method="get" id="sunqfuLoginForm" onsubmit="return validateForm()">
           <!-- E-Mail -->
           <div class="mb-4">
@@ -42,9 +42,23 @@
               type="password"
               placeholder="Your Password"
               id="upassword"
-              class="block mt-2 p-3 text-sm text-black font-medium border w-full rounded border-blue-200"
+              class="block mt-2 mb-3 p-3 text-sm text-black font-medium border w-full rounded border-blue-200"
               title="Password"
               name="upassword"
+              required
+            />
+          </div>
+          <div>
+            <label for="uconfirmpassword" class="block text-sm text-black font-medium"
+              >Confirm Your Password</label
+            >
+            <input
+              type="password"
+              placeholder="Confirm Your Password"
+              id="uconfirmpassword"
+              class="block mt-2 p-3 text-sm text-black font-medium border w-full rounded border-blue-200"
+              title="Password"
+              name="uconfirmpassword"
               required
             />
           </div>
